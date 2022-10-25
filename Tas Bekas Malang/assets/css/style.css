@@ -1,0 +1,21 @@
+/* Navbar */
+
+@media (min-width: 992px) {
+
+.nav-link:hover::after {
+	content: '';
+	display: block;
+	border-bottom: 2px solid #FFFFFF;
+	width: 50%;
+	margin: auto;
+	padding-bottom: 5px;
+	margin-bottom: -7px;	
+}
+
+}
+
+/* Jumbotron*/
+
+.jumbotron {
+	background-image: url(../../assets/img/cover.jpg);
+}

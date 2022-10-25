@@ -1,0 +1,157 @@
+/* Navbar*/
+
+.bg-gradasi {
+	background-image: linear-gradient(to top, rgba(113,176,222,1), rgba(110,97,228,1));
+}
+
+.body-primary {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* Jumbotron*/
+
+.jumbotron {
+	background-image: url(../../assets/img/cover.jpg);
+	background-size: cover;
+	height: 300px;
+	text-align: center;
+	position: relative;
+}
+
+.jumbotron .container {
+	position: relative;
+	z-index: 1;
+}
+
+.jumbotron:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0
+		));
+	position: absolute;
+	bottom: 0;
+}
+
+.bg-kotak {
+	height: 100px;
+	margin-top: 13px;
+	background-color: black;
+	opacity: 0.6;
+}
+
+/*btn judul*/
+
+.judul {
+	margin-top: -30px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.btn-judul {
+	margin: 25px 10px;
+	border-radius: 40px;
+	width: 200px;
+	height: 40px;
+	font-size: 17px;
+}
+
+.container .btn-ungu {
+	color: #fff;
+	background-color: #7204BA;
+	border-color: #7204BA;
+}
+
+.container .btn-ungu:hover {
+	color: #fff;
+    background-color: #4E0B9F;
+    border-color: #4E0B9F;
+}
+
+.bg-kotak .col-sm-2 {
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+/* Card */
+
+.bg-ungu {
+  background-color: #7204BA !important;
+}
+
+.text-ungu {
+  color: #7204BA !important;
+}
+
+.tombol-lebih {
+	margin: auto;
+	margin-bottom: 20px;
+	border-radius: 40px;
+	width: 200px;
+	height: 40px;
+	font-size: 17px;
+}
+
+/* Footer */
+
+.content-footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+/*Desktop View*/
+
+@media (min-width: 992px) {
+
+	.nav-link:hover::after {
+		content: '';
+		display: block;
+		border-bottom: 2px solid #FFFFFF;
+		width: 50%;
+		margin: auto;
+		padding-bottom: 5px;
+		margin-bottom: -7px;	
+	}
+}
+
+/* Login */
+
+/* bacground */
+.bg1-primary {
+	background-image: url(../../assets/img/bg.jpg);
+	background-size: cover;
+}
+
+/* quote */
+
+.quote1 {
+	margin-top: 50px;
+	font-size: 17px;
+	margin-bottom: -10px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.desc {
+	margin-left: 55px;
+	padding: 10px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+img.logo-login {
+	width: 75%;
+	padding: 10px;
+	margin: 100px 50px 30px 55px;
+}
+
+/* Donasi Produk */
+
+div.body-primary input.form-control {
+	width: 350px;
+}
+
+div.body-primary .category {
+	width: 250px;
+}
+
