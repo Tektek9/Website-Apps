@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Home</h1>
+    Nama Saya : {{ nama }} <br />
+    Umur : {{ umur }} <br />
+    {% for buah in list %}
+    <p>{{ buah }}</p>
+    {% endfor %} {% for key,value in dic.items() %} {{key}} : {{value}} {%
+    endfor %}
+  </body>
+</html>
