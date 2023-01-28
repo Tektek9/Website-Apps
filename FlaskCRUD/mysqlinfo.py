@@ -21,15 +21,16 @@ db.database="mydatabase"
 #         PRIMARY KEY ( ID )
 #     )
 # ''')
-# cursor.execute("DROP DATABASE mydatabase")
+# cursor.execute("DROP DATABASE
+# mydatabase")
 #db.commit()
 # cursor.execute("SHOW DATABASES")
 # cursor.execute("DESC TABLE data_pelanggan")
 # print(cursor.fetchall())
 
 # cursor.execute("SHOW TABLES")
-
-cursor.execute("INSERT INTO data_pelanggan (nama,alamat)  VALUES ('Irfan', 'Jogja')")
+cursor.execute("ALTER TABLE data_pelanggan DROP tanggal")
+#cursor.execute('''INSERT INTO data_pelanggan (nama,alamat)  VALUES ('Irfan', 'Jogja')''')
 db.commit()
 
 cursor.execute("SELECT * FROM data_pelanggan")
