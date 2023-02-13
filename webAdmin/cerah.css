@@ -1,0 +1,51 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  justify-content: center;
+  background-image: url(assets/bg1.jpg);
+  background-position: center;
+}
+
+.card {
+  justify-content: center;
+  margin-top: 75px;
+  margin-bottom: 100px;
+  opacity: 0.9;
+}
+
+.form-check {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  margin-top: 10px;
+}
+
+.container-lg {
+  justify-content: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+#jalan {
+  color: aliceblue;
+}
+
+h1 {
+  justify-content: center;
+  margin: auto;
+}
