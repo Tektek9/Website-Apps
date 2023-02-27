@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+  {% for copit in copat %}
+    <div class="container-lg" style="height: max-content; justify-content: center;">
+        <div class="row" style="height: 25%;">
+          <div class="container-lg" style="background-color: rgb(0,0,0)">
+            <marquee scrolldelay="100" bgcolor="black" style="color: aliceblue; width: 100%; right: 0; left:0;">Jangan lupa memakai masker dan tetap jaga jarak</marquee>
+          </div>
+        </div>
+          <div class="row" style="height: 25%;">
+            <div class="container-lg text-center" style="background-color: rgb(56, 56, 56);">
+                <p style="color: aliceblue;">
+                    <strong>Aplikasi Data Covid Realtime 2023</strong> <br>
+                    Aplikasi buatan anak malang, yang mungkin bermanfaat untuk pemantauan
+                    terkait data pasien korona update 2023. Saya berharap dengan aplikasi
+                    buatan saya ini pemirsa dapat dengan lebih mudah untuk memantau perkembangan
+                    covid hari ini.
+                </p>
+              </div>
+        </div>
+            <div class="row" style="height: 25%;">
+                <div class="container-lg" style="background-color: rgb(255, 0, 0); height: 100%;">
+                    <div class="row">
+                        
+                        <div class="col text-center" style="margin-top: 1%;">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                  <div class="col-md-4" style="justify-content: center; padding-top: 5%; padding-left: 5%; padding-bottom: 5%; padding-right: 5%;">
+                                    <img src="{{url_for('static',filename='img/sehat.png')}}" class="img-fluid rounded-start" alt="sehat" style="justify-content: center; height:">
+                                  </div>
+                                  <div class="col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Sembuh</h5>
+                                      <p class="card-text">{{copit.field_rapid_positif_sembuh}}</p>
+                                      <p class="card-text"><small class="text-muted">Terakhir diupdate<br>{{copit.field_covid19_tanggal_update}}</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col text-center" style="margin-top: 1%;">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                  <div class="col-md-4" style="justify-content: center; padding-top: 5%; padding-left: 5%; padding-bottom: 5%; padding-right: 5%;">
+                                    <img src="{{url_for('static',filename='img/sakit.png')}}" class="img-fluid rounded-start" alt="sakit" style="justify-content: center;">
+                                  </div>
+                                  <div class="col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Sakit</h5>
+                                      <p class="card-text">{{copit.field_rapid_positif_karantina}}</p>
+                                      <p class="card-text"><small class="text-muted">Terakhir diupdate<br>{{copit.field_covid19_tanggal_update}}</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col text-center" style="margin-top: 1%; ">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                  <div class="col-md-4" style="justify-content: center; padding-top: 5%; padding-left: 5%; padding-bottom: 5%; padding-right: 5%;">
+                                    <img src="{{url_for('static',filename='img/mati.png')}}" class="img-fluid rounded-start" alt="meninggal" style="justify-content: center;">
+                                  </div>
+                                  <div class="col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Meninggal</h5>
+                                      <p class="card-text">{{copit.field_rapid_positif_meninggal}}</p>
+                                      <p class="card-text"><small class="text-muted">Terakhir diupdate<br>{{copit.field_covid19_tanggal_update}}</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="height: 25%;">
+                <div class="container-lg text-center" style="background-color: rgb(196, 196, 196); padding-top: 10px;">
+                  <p><strong>Apa itu COVID-19?</strong> <br>
+                    Corona Virus Disease 2019 atau yang biasa disingkat COVID-19 adalah penyakit menular yang disebabkan oleh SARS-CoV-2, salah satu jenis koronavirus. Penderita COVID-19 dapat mengalami demam, batuk kering, dan kesulitan bernafas. <br> <br>
+                    
+                    <strong>Apakah COVID-19 Menular?</strong> <br>
+                    YA. Infeksi menyebar dari satu orang ke orang lain melalui percikan (droplet) dari saluran pernapasan yang sering dihasilkan saat batuk atau bersin. Jarak jangkauan droplet biasanya hingga 1 meter. Droplet bisa menempel di benda, namun tidak akan bertahan lama di udara. Waktu dari paparan virus hingga timbulnya gejala klinis antara 1-14 hari dengan rata-rata 5 hari. Maka, orang yang sedang sakit diwajibkan memakai masker guna meminimalisir penyebaran droplet. <br> <br>
+                    
+                    <strong>Apa Penyebab COVID-19?</strong> <br>
+                    Sampai saat ini belum diketahui penyebab dari virus Corona, tetapi diketahui virus ini disebarkan oleh hewan dan mampu menjangkit dari satu spesies ke spesies lainnya, termasuk manusia. Diketahui virus Corona berasal dari Kota Wuhan di China dan muncul pada Desember 2019. <br> <br>
+                    
+                    <strong>Bagaimana Gejala COVID-19?</strong> <br>
+                    Orang yang terinfeksi memiliki gejala ringan seperti demam, batuk, dan kesulitan bernafas. Gejala dapat berkembang menjadi pneumonia berat. <br> <br>
+                    
+                    <strong>Bagaimana Cara Mencegah COVID-19?</strong> <br>
+                    Tindakan pencegahan untuk mengurangi kemungkinan infeksi antara lain tetap berada di rumah, menghindari bepergian dan beraktivitas di tempat umum, sering mencuci tangan dengan sabun dan air, tidak menyentuh mata, hidung, atau mulut dengan tangan yang tidak dicuci. Segera hubungi Hotline jika Anda mengalami gejala atau memiliki riwayat perjalanan/berpergian dari Negara yang terjangkit. <br> <br>
+                    
+                    <strong>Yuk, Lindungi Diri!</strong> <br>
+                    
+                    - Terapkan etika batuk atau bersin (dengan menutup mulut dan hidung). Jangan meludah sembarangan. <br>
+                    - Bersihkan benda yang sering disentuh. <br>
+                    - Gunakan masker jika Anda sakit dan segera ke fasilitas kesehatan terdekat. <br>
+                    - Cuci tangan dengan sabun. <br>
+                    - Konsumsi makanan bergizi dan olahraga. <br>
+                    - Hindari menyentuh mata, hidung, dan mulut dengan tangan yang belum dicuci</p>
+                </div>
+            </div>
+            <div class="row" style="height: 25%;">
+                <div class="container-lg text-center" style="background-color: rgb(0, 0, 0);">
+                    <marquee scrolldelay="100" style="color: aliceblue; right: 0; left:0;"> Selamat beraktivitas dan salam sehat</marquee>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+</body>
+<footer>
+</footer>
+</html>
